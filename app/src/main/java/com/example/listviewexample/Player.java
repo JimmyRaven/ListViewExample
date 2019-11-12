@@ -8,7 +8,7 @@ public class Player {
         // use Android Studio for fast writing code, find Code->Generate
     String name;
     int age;
-    double money;
+    long money;
     String sport;
     int image;
     
@@ -44,10 +44,10 @@ public class Player {
     public void setPic(int i) {
         this.image = i;
     }
-    public double getMoney() {
+    public long getMoney() {
         return this.money;
     }
-    public void setMoney(String m) {
+    public void setMoney(long m) {
         this.money = m;
     }
 }
