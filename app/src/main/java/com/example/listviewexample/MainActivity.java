@@ -18,7 +18,12 @@ public class MainActivity extends AppCompatActivity  {
     //  Todo       ListView listView = findViewById();
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
+        ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout.textView, getPlayers());
+        //IMPORTANT CHANGE TEXTVIEW AFTER LAYOUT IS DONE
+        listView.setAdapter(adapter);
+
         //Todo listView.setAdapter(------);
+        
 
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
