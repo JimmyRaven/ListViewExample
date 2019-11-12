@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity  {
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
+        ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout.textView, getPlayers());
+        //IMPORTANT CHANGE TEXTVIEW AFTER LAYOUT IS DONE
+        listView.setAdapter(adapter);
+
+
 
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
@@ -35,6 +40,7 @@ public class MainActivity extends AppCompatActivity  {
         players.add(new Player("Serena Williams", 38, 200000000, "tennis", R.drawable.SWilliams));
         players.add(new Player("Li Na", 37, 50000000, "tennis", R.drawable.LNa));
         // Phillip, add another 7
+        return players;
     }
 
 }
