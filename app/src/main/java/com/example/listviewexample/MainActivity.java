@@ -43,7 +43,13 @@ public class MainActivity extends AppCompatActivity  {
         players.add(new Player("Serena Williams", 38, 200000000, "tennis", R.drawable.SWilliams));
         players.add(new Player("Li Na", 37, 50000000, "tennis", R.drawable.LNa));
         // Phillip, add another 7
-        players.add(new Player("Derrick Rose", 31, 2100000, "tennis", R.drawable.Derrick_Rose_Says_Its_22Not_Hard22_To_Think_About_Return_To_Chicago));
+        players.add(new Player("Derrick Rose", 31, 2100000, "basketball", R.drawable.DRose));
+        players.add(new Player("Aaron Rodgers", 35, 89300000, "football", R.drawable.ARodgers));
+        players.add(new Player("Canelo Alvarez", 29, 92000000, "boxing", R.drawable.CAlvarez));
+        players.add(new Player("Mike Trout", 28, 50600000, "baseball", R.drawable.MTrout));
+        players.add(new Player("Conor McGregor", 31, 47000000, "MMA", R.drawable.ARodgers));
+        players.add(new Player("Stephen Curry", 31, 79800000, "basketball", R.drawable.Curry));
+        players.add(new Player("Chris Paul", 34, 43800000, "basketball", R.drawable.CP));
         return players;
     }
 
