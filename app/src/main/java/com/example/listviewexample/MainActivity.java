@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -20,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
-        ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout.textView, getPlayers());
+        ArrayAdapter<Player> adapter = new ArrayAdapter<Player>(this, android.R.layout., getPlayers());
         //IMPORTANT CHANGE TEXTVIEW AFTER LAYOUT IS DONE
         listView.setAdapter(adapter);
 
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity  {
         players.add(new Player("Serena Williams", 38, 200000000, "tennis", R.drawable.SWilliams));
         players.add(new Player("Li Na", 37, 50000000, "tennis", R.drawable.LNa));
         // Phillip, add another 7
+        players.add(new Player("Derrick Rose", 31, 2100000, "tennis", R.drawable.Derrick_Rose_Says_Its_22Not_Hard22_To_Think_About_Return_To_Chicago));
         return players;
     }
 

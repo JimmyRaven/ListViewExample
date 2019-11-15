@@ -15,7 +15,7 @@ public class Player {
     public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf) {
         name = nameOf;
         age = ageOf;
-        money = moneyOf;
+        money = (long)moneyOf;
         sport = sportOf;
         image = imageOf;
     }
