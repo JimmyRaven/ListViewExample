@@ -11,13 +11,17 @@ public class Player {
     long money;
     String sport;
     int image;
-    
-    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf) {
+    String web;
+
+
+    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf, String websiteOf) {
         name = nameOf;
         age = ageOf;
         money = (long)moneyOf;
         sport = sportOf;
         image = imageOf;
+        web = websiteOf;
+
     }
 
     public String getName() {
@@ -58,5 +62,13 @@ public class Player {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getWeb() {
+        return web;
+    }
+
+    public void setWeb(String web) {
+        this.web = web;
     }
 }
