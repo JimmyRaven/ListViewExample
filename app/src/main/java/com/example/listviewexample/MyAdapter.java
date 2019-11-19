@@ -34,15 +34,15 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
         //        TextView name = single_item_view.findViewById(R.id.name);
         ImageView photo = single_item_view.findViewById(R.id.photo);
-        photo.setImageResource(single.getPic());
+        photo.setImageResource(single.getImage());
         TextView name=single_item_view.findViewById(R.id.name);
         name.setText(single.getName());
         TextView money =single_item_view.findViewById(R.id.money);
-        money.setText(single.getMoney()+"");
+        money.setText("Net Worth: $" + single.getMoney()+"");
         TextView sport =single_item_view.findViewById(R.id.sport);
-        sport.setText(single.getSport()+"");
+        sport.setText("Sport: " + single.getSport()+"");
         TextView age =single_item_view.findViewById(R.id.age);
-        age.setText(single.age+"");
+        age.setText(single.getAge()+" years old");
         return  single_item_view;
     }
 }
