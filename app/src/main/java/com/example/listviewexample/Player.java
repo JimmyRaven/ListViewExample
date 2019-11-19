@@ -11,13 +11,15 @@ public class Player {
     long money;
     String sport;
     int image;
+    String url;
     
-    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf) {
+    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf, String urlOf) {
         name = nameOf;
         age = ageOf;
         money = (long)moneyOf;
         sport = sportOf;
         image = imageOf;
+        url=urlOf;
     }
     
     public String getName() {
