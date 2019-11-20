@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,25 +20,25 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity  {
 
     Intent browserIntent;
-    ListView listView;
+    GridView gridView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     //Todo reference listview
-        listView = findViewById(R.id.list_view);
+        gridView = findViewById(R.id.grid_view);
     //  Todo       ListView listView = findViewById();
     // Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
         //Todo listView.setAdapter(------);
         MyAdapter adapter = new MyAdapter(this, R.layout.single_item, getPlayers());
         //IMPORTANT CHANGE TEXTVIEW AFTER LAYOUT IS DONE
-        listView.setAdapter(adapter);
+        gridView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView parent, View v, int position, long id) {
-                Object obj = listView.getAdapter().getItem(position);
+                Object obj = gridView.getAdapter().getItem(position);
                 Player pl = (Player) obj;
 
                 browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(pl.getWeb()));
@@ -45,6 +49,31 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.three:
+                // do something
+                gridView.setNumColumns(3);
+                return true;
+
+            case R.id.two:
+                //do something
+                gridView.setNumColumns(2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
