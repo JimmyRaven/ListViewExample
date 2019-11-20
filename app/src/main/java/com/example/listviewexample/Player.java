@@ -11,43 +11,64 @@ public class Player {
     long money;
     String sport;
     int image;
-    
-    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf) {
+    String web;
+
+
+    public Player(String nameOf, int ageOf, double moneyOf, String sportOf, int imageOf, String websiteOf) {
         name = nameOf;
         age = ageOf;
         money = (long)moneyOf;
         sport = sportOf;
         image = imageOf;
+        web = websiteOf;
+
     }
-    
+
     public String getName() {
-        return this.name;
+        return name;
     }
-    public void setName(String n) {
-        this.name = n;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getSport() {
-        return this.sport;
-    }
-    public void setSport(String s) {
-        this.sport = s;
-    }
+
     public int getAge() {
-        return this.age;
+        return age;
     }
-    public void setAge(int a) {
-        this.age = a;
+
+    public void setAge(int age) {
+        this.age = age;
     }
-    public int getPic() {
-        return this.image;
-    }
-    public void setPic(int i) {
-        this.image = i;
-    }
+
     public long getMoney() {
-        return this.money;
+        return money;
     }
-    public void setMoney(long m) {
-        this.money = m;
+
+    public void setMoney(long money) {
+        this.money = money;
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public String getWeb() {
+        return web;
+    }
+
+    public void setWeb(String web) {
+        this.web = web;
     }
 }
